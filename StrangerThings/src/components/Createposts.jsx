@@ -1,16 +1,16 @@
 import React,{useState} from "react";
-import 
+import useAuth from 
 
 
 function CreateNewPost() {
-    const
+   // const { token} = useAuth();
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
 
 return(
     <div>
-        <form>
+        <form
             onSubmit={async (event) =>{
                 event.preventDefault();
                 const result= await createPost(token, title, description, price);

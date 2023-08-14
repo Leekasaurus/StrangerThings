@@ -21,7 +21,7 @@ const Authenticate = ({setToken}) => {
                     result = await loginUser(username, password);
                 }
                 const token = result.data.token;
-                localStorage.setItem("token,token")
+                localStorage.setItem("token",token)
                 setToken(token);
                 console.log(token);
                 navigate("/user")
